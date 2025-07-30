@@ -1,35 +1,29 @@
-# Image Modification Instructions
+# Image Modification Guide
 
-This repository contains `Devil's Numbers background.png` which should be edited
-according to the instructions below. The root `AGENTS.md` summarizes these goals
-for automated agents.
+This repository contains the base image `Devil's Numbers background.png`. The goal is to split its contents into individual layers and apply modifications that add glowing red eyes and arms to the central figure.
 
-## Goal
-1. Separate all visible components of the PNG into individual layers so that
-each element (background, numbers, figure, text, etc.) can be manipulated
-separately.
-2. Modify the central figure by adding glowing red eyes.
-3. Draw or generate arms for the figure that match the existing art style.
-4. Provide the final layered image file (e.g. `.psd` or `.xcf`) alongside the
-updated flattened PNG.
+## Detailed Steps
 
-## Suggested Workflow
-1. Install image editing tools such as **GIMP** or **Krita**. These allow you to
-   manually create and manage layers. You may also install `pillow` and `rembg`
-   via `pip` to help isolate elements programmatically:
+1. Install any tools you might need for viewing or editing images. Common choices include **GIMP**, **Krita**, **ImageMagick**, and **Photoshop** (if you have a license). For automation you can install Python packages such as `pillow` and `rembg`, and optionally generative AI frameworks like Stable Diffusion.
+
    ```bash
+   sudo apt-get update
+   sudo apt-get install -y gimp krita imagemagick
+   # Install Python helpers
    pip install pillow rembg
    ```
-2. Open the PNG and, using selection tools or `rembg`, cut out each component to
-   its own layer (background, text, figure, etc.).
-3. Add a new layer for the figure's glowing eyes. Paint the eyes red and apply a
-   soft glow or blur effect.
-4. Create additional layers for the figure's arms. Use colors and shading that
-   match the original drawing.
-5. Export the layered file (`.psd`/`.xcf`) and a final composed PNG. Commit both
-   files to the repository.
+2. Open the PNG in GIMP or process it with a Python script and move each visible element to its own layer:
+   - The starry background
+   - Number groups
+   - The central figure
+   - Title text
+   - Any other distinct objects
+3. Create a layer named "Eyes" with glowing red pupils for the figure. Apply a blur or glow effect so they shine.
+4. Draw matching arms on new layers, keeping the style consistent with the existing art.
+5. Save the layered image as `Devils_Numbers_layers.xcf` (or `.psd`) and export a flattened version named `Devils_Numbers_modified.png`.
+6. Commit both the layered file and the final PNG.
+7. If any of these steps fail, debug the issue and try again until the image looks correct and all files save without errors.
 
-## Reference Links
-- Original image: `Devil's Numbers background.png` in this repository.
-- Backup download: <https://drive.google.com/file/d/1_3hZCH-gxQAdvN2Iy6iFdsXA6TgwzGfB/view?usp=drivesdk>
+## Reference
 
+The source image resides in this repository, and a backup is hosted at <https://drive.google.com/file/d/1_3hZCH-gxQAdvN2Iy6iFdsXA6TgwzGfB/view?usp=drivesdk>.
