@@ -1,5 +1,5 @@
 # Task for Code-Mode Agent
-0. ALWAYS run ensure_packages.py before doing anything
+0. ALWAYS run ensure_packages.py before doing anything (i know its a huge task but still complete it)
 1. Install any tools necessary for viewing and editing images. Recommended options include **GIMP**, **Krita**, **ImageMagick**, and, if you have a license, **Photoshop**. You may also install generative AI frameworks such as Stable Diffusion to help create new artwork.
 2. Open `Devil's Numbers background.png` in the repository root. A backup of this file is also available at:
    https://drive.google.com/file/d/1_3hZCH-gxQAdvN2Iy6iFdsXA6TgwzGfB/view?usp=drivesdk
